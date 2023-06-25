@@ -20,3 +20,7 @@ Route::get('/', function () {
 });
 
 Route::get('tasks', [TaskController::class, 'getList']);
+Route::post('task', [TaskController::class, 'store']);
+Route::get('task/{id}', [TaskController::class, 'get']);
+Route::put('task/{id}', [TaskController::class, 'update']);
+Route::delete('task/{id}', [TaskController::class, 'destroy']);
